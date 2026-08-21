@@ -27,3 +27,7 @@ git commit -m "something your change"
 git branch -M main
 git remote add origin repolink
 git push -u origin main
+
+git init 
+
+add this to this for this 
