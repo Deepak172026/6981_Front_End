@@ -1,0 +1,12 @@
+HTML:
+Html stand for Hyper text markup language.
+html is a markup language is used to structure the information and layout to make a webpage.
+Html is used to structure your unstructured data.
+Html is not a programing language it is a markup language.
+
+Html abbreviation:
+Hyper Text Markup Language.
+Hyper    - Hyper means connection between two links.
+Text     - Text means the content or display the information on the webpage.
+Markup   - Markup means using special tags used to describe the structure and meaning of content.
+Language - language is a system rules with syntax used to communicate  between human and system.
