@@ -1,0 +1,52 @@
+Evolution of website:
+Web 1.0 — 1990s:
+
+Web 1.0 = Read-Only Web
+Websites were mostly static.
+Users mainly read information.
+Users had very little interaction with websites.
+Websites were mainly created using HTML.
+Example: An old website showing information about a company.
+Website gives information → User reads it.
+
+
+Web 2.0 — 2000s:
+
+Web 2.0 = Read + Write Web
+Users can not only read information but also create, upload, share, and interact with content.
+Examples:
+Facebook
+YouTube
+Twitter/X
+Wikipedia
+For example, on YouTube:
+Watch videos
+Upload videos
+Comment
+Like
+Share
+Users become content creators and participants.
+
+
+Web 3.0 — 2010s:
+Web 3.0 = Decentralized Web
+Web 3.0 focuses on decentralization, meaning control is not kept by only one central organization.
+It commonly involves:
+⛓️ Blockchain
+🔗 Decentralized Apps (DApps)
+₿ Cryptocurrency
+Simple example:
+Web 2.0:
+YouTube → YouTube's servers → Data
+Web 3.0 concept:
+Blockchain network → Many computers → Transactions are verified by the network
+Control and data can be distributed across a network instead of being controlled by one central authority.
+
+
+Web 4.0+ — 2020s+: 
+The image describes Web 4.0+ as an intelligent web involving technologies such as:
+🤖 Artificial Intelligence
+☁️ Cloud Computing
+⚡ Edge Computing
+AI can understand user requests, process information, provide personalized responses, and automate tasks.
+Example: AI assistants that understand your question and generate an answer.
