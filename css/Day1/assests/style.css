@@ -1,0 +1,28 @@
+html{
+    scroll-behavior: smooth;
+}
+header{
+    
+    color: blue;
+    padding: 20px;
+}
+
+p{
+    color: burlywood;
+}
+button{
+    color: red;
+}
+h1{
+    color: deepskyblue;
+}
+h2{
+    color: aqua;
+}
+
+h3{
+    color: rgb(53, 120, 142);
+}
+*{
+    background-color: blanchedalmond;
+}
