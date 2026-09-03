@@ -1,0 +1,23 @@
+.Classroom{
+    color: blueviolet;
+    background-color: aliceblue;
+}
+.Topics{
+    color: azure;
+    background-color: aqua;
+}
+.Facilities{
+    color: antiquewhite;
+    background-color: rgb(237, 204, 163);
+}
+.Schedule{
+    color: red;
+    
+}
+h1{
+    color: yellow;
+}
+
+footer{
+    color: black;
+}
