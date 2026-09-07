@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cards{
+    background-color: purple;
+    padding: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.profile{
+    background-color: whitesmoke;
+    padding: 2%;
+    width: 30%;
+    border: 1px solid;
+    margin: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.cards h1{
+    font-size: 70px;
+    color: whitesmoke;
+    
+}
