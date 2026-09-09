@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cards{
+    background-color: brown;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.card1{
+    background-color: rgb(220, 215, 215);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px;
+    margin: 10px;
+    border-radius: 10px;   
+    
+}
+.card1:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
+
+.card2{
+    background-color: rgb(220, 215, 215);
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px;  
+     margin: 10px;
+      border-radius: 10px;  
+}
+
+.card2:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
+
+.card3{
+    background-color: rgb(220, 215, 215);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px;  
+     margin: 10px;
+      border-radius: 10px;  
+}
+
+.card3:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
+
+.card4{
+    background-color: rgb(220, 215, 215);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px; 
+     margin: 10px;
+      border-radius: 10px;  
+}
+
+.card4:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
+
+.card5{
+    background-color: rgb(220, 215, 215);
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px;
+     margin: 10px;
+      border-radius: 10px;  
+}
+
+.card5:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
+
+.card6{
+    background-color: rgb(220, 215, 215);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px;  
+     margin: 10px;
+      border-radius: 10px;  
+}
+
+.card6:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
+
+.card7{
+    background-color: rgb(220, 215, 215);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 300px; 
+    height: 180px;
+     margin: 10px; 
+      border-radius: 10px;  
+}
+
+.card7:hover{
+    background-color: bisque;
+    transform: scale(1.1);
+    transition: ease  0.5s; 
+    
+}
