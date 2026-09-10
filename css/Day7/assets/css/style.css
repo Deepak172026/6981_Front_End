@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    background-color: blueviolet;
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: aliceblue;
+    width: 400px;
+    padding: 20px;
+    height: 500px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    border-radius: 20px;
+}
+img{
+    width: 360px;
+    padding: 10px;
+}
+ul{
+    margin-left: 15px;
+}
+.btn{
+    width: 100px;
+    height: 30px;
+    margin-left: 140px;
+    border-radius: 10px;
+    background-color: aqua;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+    background-color: palevioletred ;
+}
