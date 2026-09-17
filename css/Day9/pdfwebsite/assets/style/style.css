@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+     padding-top: 60px;
+}
+a{
+    text-decoration: none;
+}
+.banner{
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+
+}
+.logo img{
+    height: 50px;
+    width: 150px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav{
+    display: flex;
+    gap: 30px;
+    font-size: 13px;    
+}
+.side{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 20px;
+    padding: 10px;
+}
+.btn{
+    background-color: rgb(238, 42, 42);
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.main{
+    background-color: whitesmoke;
+    
+}
+.main p{
+    color:  rgb(84, 79, 79);;
+}
+.heading{
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subtitle{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.flowbtn{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.allbtn{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.allbtn:hover{
+    border: 1px solid;
+}
+.cards1 img{
+    width: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.cards{
+    padding: 20px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
+
+}
+.card{
+    background-color: white;
+    border: 1px solid;
+    width: 270px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px ;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+}
+.card img{
+    transition: all 0.05s;
+    width: 100px;
+}
+.card:hover img{
+    transform: scale(1.1);
+   
+}
+.card:hover{
+    border: 1px solid;
+}
+.work_way{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards1{
+    padding: 20px;
+    
+    display: flex;
+    gap: 20px;
+
+}
+.card1{
+     background-color: white;
+    border: 1px solid;
+    width: 425px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow:  0 10px 30px rgba(0, 0, 0, 0.08);;
+
+
+}
+.card1:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.card1 img{
+    padding: 0;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.text{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.h h2{
+    font-size: 45px;
+    padding: 30px;
+}
+
+.yellow{
+    display: flex; 
+    padding: 100px;
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
+
+
+.yellow1 img{
+    width: 500px;
+    height: 350px;
+
+}
+.yellow2{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.yellow2 h4{
+     font-size: 28px;
+}
+
+.yellow2 a{
+    border: 3px solid;
+    border-color:  rgb(238, 42, 42);
+    width: 150px;
+    display: flex;
+    padding: 8px;
+    color: rgb(231, 23, 23); 
+    font-size: 15px;
+    justify-content: center;
+    border-radius: 10px;
+   
+}
+.text2{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+.text2 p{
+    font-size: 25px;
+     color:  rgb(84, 79, 79);;
+}
+.svgimg{
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    gap: 150px;
+    justify-content: center;
+}
+
+.svgimg img{
+    height: 40px;
+}
+
+.footer{
+    background-color: rgb(55, 53, 53);;
+    color: white;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+}
+.footer-column{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 15px;
+
+}
+.footer-img img{
+    width: 180px;
+    height: 40px;
+    display: flex;
+    gap: 25px;
+    
+}
+.footer-img{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-column a{
+    color: rgb(239, 232, 232);
+}
+
+.a1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
