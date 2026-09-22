@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Verdant & Co. — exceptional loose-leaf tea, thoughtfully sourced." />
+  <title>Verdant & Co. | Exceptional Tea</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { ink: '#18362F', moss: '#3E6149', cream: '#FAF8F2', sand: '#EAE1D0', gold: '#C99552' },
+          fontFamily: { display: ['Georgia', 'serif'], sans: ['Arial', 'sans-serif'] },
+          boxShadow: { soft: '0 16px 45px rgba(24,54,47,.12)' }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-cream font-sans text-ink antialiased">
+  <div class="bg-ink px-4 py-2 text-center text-xs tracking-[.18em] text-cream">COMPLIMENTARY SHIPPING ON ORDERS OVER $45</div>
+
+  <header class="sticky top-0 z-30 flex w-full items-center justify-between bg-cream px-6 py-6 shadow-[0_10px_24px_-12px_rgba(24,54,47,0.38)] lg:px-12">
+    <a href="#" class="flex items-center gap-3" aria-label="Verdant & Co. home">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full border border-moss/30 text-xl">❋</span>
+      <span class="font-display text-2xl tracking-tight">Verdant <em class="font-normal">&amp;</em> Co.</span>
+    </a>
+    <nav class="hidden items-center gap-8 text-sm font-medium lg:flex">
+      <a class="flex items-center gap-2 rounded-full border border-ink/15 px-3 py-2 transition hover:border-gold hover:text-gold" href="#shop"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c4.5-2.5 7-6.6 7-12.5C13.1 8.4 8.2 11.2 7 17c1.6 1.2 3.3 2.5 5 4zM7 17C5 15.4 4 13 4 10.3c3.9 0 6.5 2.2 8 6.7"/></svg>Shop Tea</a>
+      <a class="flex items-center gap-2 rounded-full border border-ink/15 px-3 py-2 transition hover:border-gold hover:text-gold" href="#ritual"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 016.5 3H12v16H6.5A2.5 2.5 0 014 16.5v-11zM20 5.5A2.5 2.5 0 0017.5 3H12v16h5.5a2.5 2.5 0 002.5-2.5v-11z"/></svg>Our Story</a>
+      <a class="flex items-center gap-2 rounded-full border border-ink/15 px-3 py-2 transition hover:border-gold hover:text-gold" href="#journal"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.5 4.5l5 5L9 20l-5 1 1-5 9.5-11.5zM13 6l5 5"/></svg>Journal</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <button class="hidden text-sm sm:block" aria-label="Search">Search</button>
+      <button class="relative rounded-full border border-ink/20 p-2.5 transition hover:bg-sand" aria-label="Shopping bag">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l-1 11H6L5 9z"/></svg>
+        <span class="absolute -right-1 -top-1 grid h-4 w-4 place-items-center rounded-full bg-gold text-[9px] text-white">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-8 lg:grid-cols-2 lg:px-8 lg:pb-28 lg:pt-16">
+      <div class="order-2 lg:order-1">
+        <p class="mb-5 flex items-center gap-3 text-xs font-bold tracking-[.22em] text-moss"><span class="h-px w-9 bg-gold"></span> A MOMENT, STEEPED WELL</p>
+        <h1 class="max-w-xl font-display text-5xl leading-[.98] tracking-tight sm:text-6xl lg:text-7xl">Find your daily<br /><em class="font-normal text-moss">pause.</em></h1>
+        <p class="mt-7 max-w-md text-base leading-7 text-ink/70">Small-batch loose-leaf teas selected for the quiet, delicious rituals that make a day feel like your own.</p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#shop" class="bg-ink px-7 py-4 text-sm font-semibold text-cream transition hover:bg-moss">Explore the collection</a>
+          <a href="#ritual" class="border border-ink/20 px-7 py-4 text-sm font-semibold transition hover:border-ink">Meet Verdant</a>
+        </div>
+        <div class="mt-12 flex items-center gap-5 text-sm text-ink/65">
+          <div class="flex -space-x-3">
+            <img class="h-9 w-9 rounded-full border-2 border-cream object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+            <img class="h-9 w-9 rounded-full border-2 border-cream object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+            <img class="h-9 w-9 rounded-full border-2 border-cream object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Customer" />
+          </div><span>Loved by 8,000+ tea drinkers</span>
+        </div>
+      </div>
+      <div class="order-1 relative lg:order-2">
+        <div class="absolute -right-5 -top-5 h-40 w-40 rounded-full bg-sand sm:h-60 sm:w-60"></div>
+        <img class="relative h-[430px] w-full object-cover shadow-soft sm:h-[540px]" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1100&q=85" alt="A warm cup of botanical tea" />
+        <div class="absolute bottom-5 left-5 bg-cream px-5 py-4 shadow-soft">
+          <p class="text-[10px] font-bold tracking-[.18em] text-moss">SEASONAL FAVOURITE</p>
+          <p class="mt-1 font-display text-xl">Honeybush &amp; Rose</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="bg-ink px-6 py-20 text-cream lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mb-12 flex flex-wrap items-end justify-between gap-5">
+          <div><p class="text-xs font-bold tracking-[.2em] text-gold">THE PANTRY</p><h2 class="mt-3 font-display text-4xl sm:text-5xl">Tea for every hour.</h2></div>
+          <a href="#" class="border-b border-gold pb-1 text-sm font-semibold text-gold">Shop all teas →</a>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group bg-cream p-4 text-ink"><div class="overflow-hidden bg-sand"><img class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=500&q=80" alt="Green tea leaves" /></div><div class="px-1 pb-2 pt-5"><p class="text-[10px] font-bold tracking-[.16em] text-moss">GREEN TEA</p><h3 class="mt-2 font-display text-2xl">Morning Meadow</h3><div class="mt-3 flex justify-between text-sm"><span>$18.00</span><button class="font-semibold underline underline-offset-4">Add +</button></div></div></article>
+          <article class="group bg-cream p-4 text-ink"><div class="overflow-hidden bg-sand"><img class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=500&q=80" alt="Black tea with dried flowers" /></div><div class="px-1 pb-2 pt-5"><p class="text-[10px] font-bold tracking-[.16em] text-moss">BLACK TEA</p><h3 class="mt-2 font-display text-2xl">Earl Grey No. 4</h3><div class="mt-3 flex justify-between text-sm"><span>$16.00</span><button class="font-semibold underline underline-offset-4">Add +</button></div></div></article>
+          <article class="group bg-cream p-4 text-ink"><div class="overflow-hidden bg-sand"><img class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=500&q=80" alt="Herbal tea ingredients" /></div><div class="px-1 pb-2 pt-5"><p class="text-[10px] font-bold tracking-[.16em] text-moss">HERBAL INFUSION</p><h3 class="mt-2 font-display text-2xl">Golden Hour</h3><div class="mt-3 flex justify-between text-sm"><span>$17.00</span><button class="font-semibold underline underline-offset-4">Add +</button></div></div></article>
+          <article class="group bg-cream p-4 text-ink"><div class="overflow-hidden bg-sand"><img class="h-64 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=80" alt="White tea in a cup" /></div><div class="px-1 pb-2 pt-5"><p class="text-[10px] font-bold tracking-[.16em] text-moss">WHITE TEA</p><h3 class="mt-2 font-display text-2xl">Cloud Garden</h3><div class="mt-3 flex justify-between text-sm"><span>$22.00</span><button class="font-semibold underline underline-offset-4">Add +</button></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ritual" class="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center lg:px-8">
+      <div class="grid grid-cols-2 gap-4"><img class="mt-12 h-72 w-full object-cover" src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=600&q=80" alt="Tea being poured" /><img class="h-72 w-full object-cover" src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?auto=format&fit=crop&w=600&q=80" alt="Loose leaf tea" /></div>
+      <div class="lg:pl-12"><p class="text-xs font-bold tracking-[.2em] text-moss">OUR PROMISE</p><h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Better tea begins at the source.</h2><p class="mt-6 max-w-lg leading-7 text-ink/70">We work with small gardens and makers who grow with care. Every blend is tasted, tweaked, and packed fresh in our studio — so the cup in your hands feels genuinely special.</p><div class="mt-9 grid grid-cols-3 gap-4 border-t border-ink/15 pt-6 text-center"><div><p class="font-display text-3xl">12</p><p class="mt-1 text-[10px] font-bold tracking-wider text-moss">COUNTRIES</p></div><div><p class="font-display text-3xl">100%</p><p class="mt-1 text-[10px] font-bold tracking-wider text-moss">PLASTIC FREE</p></div><div><p class="font-display text-3xl">0</p><p class="mt-1 text-[10px] font-bold tracking-wider text-moss">PRETENCE</p></div></div></div>
+    </section>
+
+    <section id="journal" class="bg-sand px-6 py-20 lg:px-8"><div class="mx-auto max-w-4xl text-center"><p class="text-xs font-bold tracking-[.2em] text-moss">A NOTE FROM THE TEA TABLE</p><blockquote class="mt-6 font-display text-3xl leading-tight sm:text-4xl">“Tea is a little world in itself. Take the time to notice it.”</blockquote><p class="mt-6 text-sm text-ink/60">— A Verdant ritual</p><a href="#" class="mt-9 inline-block bg-ink px-7 py-4 text-sm font-semibold text-cream transition hover:bg-moss">Read the journal</a></div></section>
+  </main>
+
+  <footer class="bg-ink px-6 py-12 text-cream lg:px-8"><div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-2"><div><a href="#" class="font-display text-3xl">Verdant <em class="font-normal">&amp;</em> Co.</a><p class="mt-4 max-w-sm text-sm leading-6 text-cream/60">Slow down. Steep something wonderful.</p></div><div><p class="text-xs font-bold tracking-[.16em] text-gold">A CUP IN YOUR INBOX</p><div class="mt-4 flex max-w-md border-b border-cream/40"><input class="w-full bg-transparent py-3 text-sm outline-none placeholder:text-cream/45" type="email" placeholder="Your email address" aria-label="Email address" /><button class="text-sm font-bold text-gold">JOIN</button></div></div></div><div class="mx-auto mt-12 flex max-w-7xl flex-wrap justify-between gap-4 border-t border-cream/15 pt-6 text-xs text-cream/45"><span>© 2026 Verdant &amp; Co.</span><span>Instagram &nbsp; · &nbsp; Pinterest &nbsp; · &nbsp; Contact</span></div></footer>
+</body>
+</html>
