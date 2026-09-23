@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Project Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+
+        /* Header */
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header i {
+            font-size: 55px;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        /* Cards */
+
+        .days {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .day-card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #334155;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Icon */
+
+        .icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #0f172a;
+            border-radius: 50%;
+
+            color: #38bdf8;
+            font-size: 28px;
+        }
+
+        .day-card h2 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .day-card p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+
+        .day-card a {
+            text-decoration: none;
+        }
+
+        .day-card button {
+            border: none;
+            background: #2563eb;
+            color: white;
+
+            padding: 11px 22px;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .day-card button:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        /* Task buttons */
+
+        .tasks {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tasks button {
+            background: #7c3aed;
+        }
+
+        .tasks button:hover {
+            background: #a78bfa;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* Tablet */
+
+        @media (max-width: 800px) {
+
+            .days {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* Mobile */
+
+        @media (max-width: 500px) {
+
+            section {
+                width: 90%;
+                margin: 40px auto;
+            }
+
+            .days {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <i class="fa-brands fa-css3-alt"></i>
+
+            <h1>Welcome to My CSS Project</h1>
+
+            <p>Explore my CSS projects and tasks day by day</p>
+
+        </div>
+
+
+        <!-- Project Cards -->
+
+        <div class="days">
+
+
+            <!-- Day 1 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h2>Day 1</h2>
+
+                <p>CSS Basics and Introduction</p>
+
+                <a href="file:///D:/Front_End/css/Day1/index.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- Day 2 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+
+                <h2>Day 2</h2>
+
+                <p>CSS Styling and Properties</p>
+
+                <a href="file:///D:/Front_End/css/Day2/index.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- Day 3 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+
+                <h2>Day 3</h2>
+
+                <p>Student Profile Card</p>
+
+                <a href="file:///D:/Front_End/css/Day3/student_profile_card/index.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- Day 4 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+
+                <h2>Day 4</h2>
+
+                <p>Coffee Shop Website</p>
+
+                <a href="file:///D:/Front_End/css/Day4/coffee_shop/index.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- Day 5 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <h2>Day 5</h2>
+
+                <p>CSS Cards and Layouts</p>
+
+                <a href="file:///D:/Front_End/css/Day6/tasks/cards.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- Day 6 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h2>Day 6</h2>
+
+                <p>CSS Web Page Practice</p>
+
+                <a href="file:///D:/Front_End/css/Day7/index.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- Day 7 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <h2>Day 7</h2>
+
+                <p>CSS Tasks and Web Pages</p>
+
+                <div class="tasks">
+
+                    <a href="file:///D:/Front_End/css/Day8/webpage/index1.html">
+
+                        <button>
+                            Task 1
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </a>
+
+                    <a href="file:///D:/Front_End/css/Day8/webpage/index2.html">
+
+                        <button>
+                            Task 2
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Day 8 -->
+
+            <div class="day-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+
+                <h2>Day 8</h2>
+
+                <p>PDF Website Project</p>
+
+                <a href="file:///D:/Front_End/css/Day9/pdfwebsite/index.html">
+
+                    <button>
+                        Open Project
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+                <i class="fa-solid fa-code"></i>
+                My CSS Learning Projects • 2026
+            </p>
+
+        </footer>
+
+    </section>
+
+</body>
+
+</html>

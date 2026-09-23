@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Project Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        section {
+            width: 90%;
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+
+        /* Header */
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header i {
+            font-size: 55px;
+            color: #f7df1e;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        /* Cards Container */
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Project Card */
+
+        .project-card {
+            width: 330px;
+
+            background: #1e293b;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            border: 1px solid #334155;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #f7df1e;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Icon */
+
+        .icon {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #0f172a;
+
+            border-radius: 50%;
+
+            color: #f7df1e;
+
+            font-size: 28px;
+        }
+
+        .project-card h2 {
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #94a3b8;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        /* Task Buttons */
+
+        .tasks {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+        .tasks a {
+            text-decoration: none;
+
+            background: #f7df1e;
+
+            color: #111827;
+
+            padding: 10px 16px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .tasks a:hover {
+            background: #fde68a;
+
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+
+            margin-top: 50px;
+
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 500px) {
+
+            section {
+                width: 90%;
+
+                margin: 40px auto;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <section>
+
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <i class="fa-brands fa-js"></i>
+
+            <h1>Welcome to My JavaScript Projects</h1>
+
+            <p>Explore my JavaScript projects and tasks day by day</p>
+
+        </div>
+
+
+        <!-- Project Cards -->
+
+        <div class="projects">
+
+
+            <!-- Day 1 -->
+
+            <div class="project-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h2>Day 1</h2>
+
+                <p>JavaScript Basics and Introduction</p>
+
+                <div class="tasks">
+
+                    <a href="file:///D:/Front_End/javascript/Day1/Task1/index.html">
+                        Task 1
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="file:///D:/Front_End/javascript/Day1/Task2/index.html">
+                        Task 2
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Day 2 -->
+
+            <div class="project-card">
+
+                <div class="icon">
+                    <i class="fa-solid fa-code-branch"></i>
+                </div>
+
+                <h2>Day 2</h2>
+
+                <p>JavaScript Variables</p>
+
+                <div class="tasks">
+
+                    <a href="file:///D:/Front_End/javascript/Day2/Task/const.html">
+                        const
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="file:///D:/Front_End/javascript/Day2/Task/let.html">
+                        let
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="file:///D:/Front_End/javascript/Day2/Task/var.html">
+                        var
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+                <i class="fa-brands fa-js"></i>
+                My JavaScript Learning Projects • 2026
+            </p>
+
+        </footer>
+
+
+    </section>
+
+</body>
+
+</html>
