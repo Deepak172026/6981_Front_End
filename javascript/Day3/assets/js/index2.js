@@ -95,3 +95,55 @@ console.log(villageName);
 villageName += " village"
 console.log(villageName)
 
+// number
+
+let value = 10
+console.log(value)
+value += 15
+console.log(value);
+
+let age = 10
+console.log(age)
+age += 15
+console.log(age);
+
+let studentMark = 35
+console.log(studentMark)
+studentMark += 15
+console.log(studentMark);
+
+let marketPrice = 50
+console.log(marketPrice)
+marketPrice += 15
+console.log(marketPrice);
+
+
+let addValue = 30
+console.log(addValue)
+addValue += 50
+console.log(addValue);
+
+let shirtPrice = 300
+console.log(shirtPrice)
+shirtPrice += 100
+console.log(shirtPrice);
+
+let houseRent = 30000
+console.log(houseRent)
+houseRent += 500
+console.log(houseRent);
+
+let salary = 300000
+console.log(salary)
+salary += 50000
+console.log(salary);
+
+let productCart = 3
+console.log(productCart)
+productCart += 4
+console.log(productCart);
+
+let addValue3 = 3050
+console.log(addValue3)
+addValue3 += 50
+console.log(addValue3);
