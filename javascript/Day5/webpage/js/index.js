@@ -196,8 +196,8 @@ for(let number2 = 1; number2<=10; number2++){
 // Total = 55
 
 let total3 = 0;
-for(let i=1; i<=10; i++){
-    total3+=i
-    console.log(total);
+for(let z=1; z<=10; z++){
+    total3+=z
 }
+console.log("Total Value is" , total3);
 
