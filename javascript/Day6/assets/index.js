@@ -30,11 +30,53 @@ console.log(line);
 // Using a loop, calculate:
 // 1 + 2 + 3 + ... + 20
 
-let line2= ""
-let c=1
-while(c<=20){
-    line2+=c+ "+ "
-    c++
-
+let sum  = 0;
+for(let c=1; c<=20; c++){
+    sum +=c
+    console.log(sum);
 }
-console.log(line2);
+
+
+// TASK 4 – Print Squares
+// Using a loop, print the square of numbers from 1 to 10.
+// Expected:
+// 1
+// 4
+// 9
+// 16
+// 25
+// 36
+// 49
+// 64
+// 81
+// 100
+
+let total3
+for(let c=1; c<=10; c++){
+    total3 = c*c
+    console.log(total3);
+}
+
+// TASK 5 – Countdown
+// Using a loop, print numbers from 50 to 0, decreasing by 5.
+// Expected:
+// 50
+// 45
+// 40
+// 35
+// 30
+// 25
+// 20
+// 15
+// 10
+// 5
+// 0
+
+let total4
+for(let d=10; d>=0; d--){
+    total4 = (d * 5)
+    console.log(total4);
+    
+}
+
+
