@@ -95,6 +95,43 @@ let employee = {name:"arun", salary:25000, role:"developer"}
 employee.salary=30000
 console.log(employee.salary);
 
+// TASK 8 – ADD NEW PROPERTY
+// Create:
+// let product = {
+//     name: "Laptop",
+//     price: 50000
+// };
+// Add:
+// brand = "Dell"
+// Then print:
+// Product Name
+// Price
+// Brand
+
+let product = { name: "Laptop",    price: 50000 };
+
+product.brand = "dell"
+
+console.log(product);
+
+// Create an object:
+// let car = {
+//     brand: "Toyota",
+//     model: "Fortuner",
+//     year: 2025
+// };
+// Using for...in, print all keys and values.
+// Expected format:
+// brand Toyota
+// model Fortuner
+// year 2025
+
+let car =  { brand:"Toyota", model: "fortuner", Year : 2025 }
+for(let h = 0; h<=2; h++){
+    console.log(car[h]);
+    
+}
+
 
 
 
