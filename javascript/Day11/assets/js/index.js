@@ -112,8 +112,39 @@ const employees6Result = employees6.map((emp) => emp.name)
 console.log(employees6Result);
 
 
+// TASK 7 – CALCULATE TOTAL
+// ------------------------
+// Given:
+// let prices = [100, 200, 300, 400];
+// Calculate the total price.
+// Expected Output:
+// 1000
+// Use:
+// reduce()
+const prices = [100, 200, 300, 400];
+const pricesResult = prices.reduce((total, sum) =>{
+    return total+sum
+})
+console.log(pricesResult);
 
+// TASK 8 – CHECK PASS STATUS
+// --------------------------
+// Given:
+// let marks = [75, 80, 35, 90, 65];
+// Check:
+// 1. Is there at least one mark below 40?
+// 2. Are all marks 35 or above?
+// Use:
+// some()
+// every()
 
+const marks8 = [75, 80, 35, 90, 65];
+const marks8Result = marks8.some((num) => num<40)
+console.log(marks8Result);
+
+const marks9 = [75, 80, 35, 90, 65];
+const marks9Result = marks8.every((num) => num>35)
+console.log(marks9Result);
 
 
 
