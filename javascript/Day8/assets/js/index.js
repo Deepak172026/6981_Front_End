@@ -118,6 +118,5 @@ const resultFunction5 = (number1) =>{
         }
     }
     console.log(count);
-    
 }
 resultFunction5([10, 15, 20, 25, 30, 35, 40, 50])
