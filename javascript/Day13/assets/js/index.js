@@ -50,3 +50,55 @@ button2.addEventListener("click", ()=>{
     box1.style.textAlign = "center";
     box1.style.backgroundColor = "pink"
 })
+// TASK 3 – SHOW AND HIDE
+// ----------------------------------------
+// Create:
+// 1. One paragraph.
+// 2. One Hide button.
+// 3. One Show button.
+// Requirements:
+// 1. Initially, paragraph should be visible.
+// 2. Click Hide → Paragraph disappears.
+// 3. Click Show → Paragraph appears.
+// 4. Use style.display = "none".
+// 5. Use style.display = "block".
+
+let paragraph = document.getElementById("para");
+let hideBtn = document.getElementById("hide")
+let showBtn = document.getElementById("show")
+
+hideBtn.addEventListener("click", () =>{
+    paragraph.style.display = "none"
+})
+
+
+showBtn.addEventListener("click", () =>{
+    paragraph.style.display = "block"
+})
+
+// TASK 4 – TOGGLE SHOW / HIDE
+// ----------------------------------------
+// Create:
+// 1. One heading.
+// 2. One Toggle button.
+// Requirements:
+// 1. Initially, heading should be visible.
+// 2. First click → Hide heading.
+// 3. Second click → Show heading.
+// 4. Third click → Hide heading.
+// 5. Use addEventListener() and if/else.
+
+let heading1 = document.querySelector("#head1")
+let hidebtn1 = document.querySelector("#hide1")
+
+hidebtn1.addEventListener("click", () =>{
+    if(heading1.style.display === "block"){
+        hidebtn1.textContent = "show"
+        heading1.style.display = "none"
+
+    }else{
+        hidebtn1.textContent = "hide"
+        heading1.style.display = "block"
+    }
+})
+
