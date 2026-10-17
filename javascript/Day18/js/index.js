@@ -38,25 +38,55 @@ expressionFunction ()
 // deductSalary should subtract ₹2,000.
 // Call calculateSalary() with both callbacks.
 
-const salaryFunction = (salary,salaryBonous)=>{
-
-
-    const salary1Function  = (debutSalary) =>{
-        
-        console.log(salary);
-        console.log(salaryBonous);
-        
-        
-        let total;
-        total = salary + salaryBonous;
-
-        console.log(`Total Salary = ${total}`);
-        
-        total = total - debutSalary;
-        console.log(`After Expenses = ${total}`);
-       
-    }
-    salary1Function(1000);
+const singleFunction = (call) =>{
+   call(10000, 5000, 1000)
 }
-salaryFunction(10000, 5000)
+const callbackFunction = (employeeSalary, employeeBonous, afterExpenses) => {
 
+    console.log(`Total Salary = ${employeeSalary}`);
+    
+     total = employeeSalary + employeeBonous
+
+    console.log(`Total Salary After Bonous = ${total}`);
+
+    total = total - afterExpenses
+
+    console.log(`After Expenses = ${total}`);
+
+}
+singleFunction(callbackFunction)
+
+// Task 3 — Promise (Student Result Checking)
+// Create a function checkResult(mark) that returns a Promise.
+// Requirements:
+// Accept a student's mark as a parameter.
+// Use new Promise() with resolve and reject.
+// If the mark is 35 or above, resolve with "Student Passed".
+// Otherwise, reject with "Student Failed".
+// Add a 2-second delay using setTimeout().
+// Handle the result using .then() and .catch().
+let checkMark =  (mark) =>{
+const promiseFunction = new Promise((resolve, reject)=>{
+    
+
+   setTimeout(()=>{
+     if (mark>=35){
+        resolve("your are passed");
+        
+    }else
+        reject("Your are failed");
+    
+   },2000)
+})
+return promiseFunction;
+}
+
+checkMark(9)
+.then((result)=>{
+    console.log(result);
+    
+})
+.catch((result) =>{
+    console.log(result);
+    
+})
