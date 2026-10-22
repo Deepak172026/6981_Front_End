@@ -1,16 +1,10 @@
-import Button, {NewButton}  from "./assets/components/Button.jsx"
-import NavBar from "./assets/components/NavBar.jsx"
-
+import Student from "./assets/components/Student";
 const App = () =>{
   return(
     <>
-      <Button />
-      <NavBar />
-      <NewButton />
-     
+    <h1>Welcome to Our Page</h1>
+    <Student />
     </>
-  );
-
-};
-
+  )
+}
 export default App
