@@ -17,6 +17,7 @@ const App = () => {
       <Route  path="/Ml" element={<Ml />}/>
       <Route  path="/Real_worldAi" element={<Real_wordAi />}/>
     </Routes>
+    <Home />
     </>
   )
 }
