@@ -1,0 +1,16 @@
+import { Link } from "react-router-dom"
+const NavBar = () => {
+  return (
+    <>
+    <div className="bg-amber-200 p-5 flex  gap-5 ">
+        <div className="bg-white p-2 rounded-2xl text-center flex justify-center items-center">logo</div>
+        <div className="bg-white p-2 rounded-2xl flex justify-center items-center">
+            <Link to="/">Home</Link>
+        </div>
+    </div>
+    </>
+    
+  )
+}
+
+export default NavBar
