@@ -1,4 +1,5 @@
 import NavBar from "./componenets/NavBar"
+import Banner from "./componenets/Banner"
 import Ai from "./pages/Ai"
 import Future from "./pages/Future"
 import Home from "./pages/Home"
@@ -9,15 +10,29 @@ const App = () => {
   return (
     <>
     <NavBar />
+    
+      
+      
 
     <Routes>
+      <Route
+          path="/"
+          element={
+            <>
+              <Banner />
+              <Home />
+            </>
+          }
+        />
+      
       <Route  path="/" element={<Home />}/>
-      <Route  path="/Future" element={<Future />}/>
-      <Route  path="/Ai" element={<Ai />}/>
-      <Route  path="/Ml" element={<Ml />}/>
-      <Route  path="/Real_worldAi" element={<Real_wordAi />}/>
+      <Route  path="/future" element={<Future />}/>
+      <Route  path="/ai" element={<Ai />}/>
+      <Route  path="/ml" element={<Ml />}/>
+      <Route  path="/real_worldAi" element={<Real_wordAi />}/>
     </Routes>
-    <Home />
+  
+    
     </>
   )
 }
