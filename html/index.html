@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,146 +19,185 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
+            background: #fafafa;
+            color: #171717;
             min-height: 100vh;
         }
 
+        /* Navbar */
+        .navbar {
+            background: #171717;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo i {
+            color: #f97316;
+            font-size: 28px;
+        }
+
+        .nav-text {
+            color: #d4d4d4;
+            font-size: 14px;
+        }
+
+        /* Main Section */
         section {
-            width: 90%;
-            max-width: 1100px;
-            margin: 60px auto;
+            width: 86%;
+            max-width: 1200px;
+            margin: 65px auto 40px;
         }
 
         /* Header */
-
         .header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
         }
 
-        .header i {
-            font-size: 55px;
-            color: #38bdf8;
-            margin-bottom: 15px;
+        .header .main-icon {
+            font-size: 48px;
+            color: #f97316;
+            margin-bottom: 18px;
         }
 
         .header h1 {
             font-size: 38px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #171717;
         }
 
         .header p {
-            color: #94a3b8;
-            font-size: 17px;
+            color: #737373;
+            font-size: 16px;
+            line-height: 1.7;
         }
 
-        /* Cards */
+        .header span {
+            color: #f97316;
+        }
 
+        /* Project Cards */
         .days {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            gap: 24px;
         }
 
         .day-card {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 18px;
-            border: 1px solid #334155;
+            background: #ffffff;
+            padding: 30px 22px;
+            border-radius: 14px;
+            border: 1px solid #e5e5e5;
             text-align: center;
-
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
 
         .day-card:hover {
-            transform: translateY(-8px);
-            border-color: #38bdf8;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transform: translateY(-6px);
+            border-color: #f97316;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
         }
 
-        /* Icon */
-
+        /* Card Icon */
         .icon {
-            width: 65px;
-            height: 65px;
+            width: 64px;
+            height: 64px;
             margin: 0 auto 20px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
-            background: #0f172a;
-            border-radius: 50%;
-
-            color: #38bdf8;
+            background: #fff7ed;
+            border-radius: 14px;
+            color: #f97316;
             font-size: 28px;
         }
 
         .day-card h2 {
-            font-size: 23px;
+            font-size: 22px;
             margin-bottom: 10px;
+            color: #171717;
         }
 
         .day-card p {
-            color: #94a3b8;
+            color: #737373;
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+            line-height: 1.6;
         }
 
         /* Button */
-
         .day-card a {
+            display: inline-block;
             text-decoration: none;
         }
 
         .day-card button {
             border: none;
-            background: #2563eb;
-            color: white;
-
-            padding: 11px 22px;
-
+            background: #f97316;
+            color: #ffffff;
+            padding: 12px 20px;
             border-radius: 8px;
-
-            font-size: 15px;
-
+            font-size: 14px;
+            font-weight: bold;
             cursor: pointer;
-
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
 
         .day-card button:hover {
-            background: #38bdf8;
-            color: #0f172a;
+            background: #ea580c;
+            transform: scale(1.03);
+        }
+
+        .day-card button i {
+            margin-left: 7px;
         }
 
         /* Footer */
-
         footer {
             text-align: center;
             margin-top: 50px;
-            color: #64748b;
-            font-size: 14px;
+            padding: 22px;
+            border-top: 1px solid #e5e5e5;
+            color: #737373;
+            font-size: 13px;
         }
 
         /* Tablet */
-
-        @media (max-width: 800px) {
-
+        @media (max-width: 850px) {
             .days {
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            section {
+                width: 90%;
+            }
         }
 
         /* Mobile */
+        @media (max-width: 550px) {
+            .navbar {
+                padding: 18px 5%;
+            }
 
-        @media (max-width: 500px) {
+            .logo {
+                font-size: 19px;
+            }
 
             section {
-                width: 90%;
-                margin: 40px auto;
+                margin-top: 40px;
             }
 
             .days {
@@ -165,185 +205,143 @@
             }
 
             .header h1 {
-                font-size: 28px;
+                font-size: 29px;
             }
 
+            .header p {
+                font-size: 14px;
+            }
+
+            .day-card {
+                padding: 26px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-code"></i>
+            <span>HTML Projects</span>
+        </div>
+
+        <div class="nav-text">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Learn • Practice • Build
+        </div>
+    </nav>
+
     <section>
 
         <!-- Header -->
-
         <div class="header">
+            <div class="main-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
 
-            <i class="fa-solid fa-code"></i>
+            <h1>Welcome to Our <span>HTML Project</span></h1>
 
-            <h1>Welcome to Our HTML Project</h1>
-
-            <p>Explore and practice HTML projects day by day</p>
-
+            <p>
+                Explore and practice HTML projects day by day.<br>
+                Build your skills, one project at a time.
+            </p>
         </div>
 
-
-        <!-- Cards -->
-
+        <!-- Project Cards -->
         <div class="days">
 
             <!-- Day 1 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-brands fa-html5"></i>
                 </div>
-
                 <h2>Day 1</h2>
-
                 <p>HTML Basics and Structure</p>
-
                 <a href="file:///D:/Front_End/html/day1/index.html">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
-
             <!-- Day 2 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-solid fa-code"></i>
                 </div>
-
                 <h2>Day 2</h2>
-
                 <p>HTML Elements and Tags</p>
-
                 <a href="file:///D:/Front_End/html/Day2/index.html">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
-
             <!-- Day 3 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-solid fa-table"></i>
                 </div>
-
                 <h2>Day 3</h2>
-
                 <p>Tables and Forms</p>
-
                 <a href="file:///D:/Front_End/html/Day3/index.html">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
-
             <!-- Day 4 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
-
                 <h2>Day 4</h2>
-
                 <p>Web Page Design</p>
-
                 <a href="file:///D:/Front_End/html/Day4/webpagel/Task2/index.html">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
-
             <!-- Day 5 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-solid fa-image"></i>
                 </div>
-
                 <h2>Day 5</h2>
-
                 <p>Images and Multimedia</p>
-
-                <a href="D:\Front_End\html\Day5">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                <a href="file:///D:/Front_End/html/Day5/index.html">
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
-
             <!-- Day 6 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-solid fa-link"></i>
                 </div>
-
                 <h2>Day 6</h2>
-
                 <p>Links and Navigation</p>
-
-                <a href="D:\Front_End\html\Day6">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                <a href="file:///D:/Front_End/html/Day6/index.html">
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
-
             <!-- Day 7 -->
-
             <div class="day-card">
-
                 <div class="icon">
                     <i class="fa-solid fa-globe"></i>
                 </div>
-
                 <h2>Day 7</h2>
-
                 <p>Complete HTML Project</p>
-
                 <a href="file:///D:/Front_End/html/Day7/index.html">
-                    <button>
-                        Open Project <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
                 </a>
-
             </div>
 
         </div>
 
-
+        <!-- Footer -->
         <footer>
-            <p>© 2026 HTML Learning Project</p>
+            <p>© 2026 HTML Learning Project. Keep Learning, Keep Building.</p>
         </footer>
 
     </section>
