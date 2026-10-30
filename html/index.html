@@ -1,6 +1,7 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,341 +11,198 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #fafafa;
-            color: #171717;
-            min-height: 100vh;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: #171717;
-            color: white;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .logo i {
-            color: #f97316;
-            font-size: 28px;
-        }
-
-        .nav-text {
-            color: #d4d4d4;
-            font-size: 14px;
-        }
-
-        /* Main Section */
-        section {
-            width: 86%;
-            max-width: 1200px;
-            margin: 65px auto 40px;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .header .main-icon {
-            font-size: 48px;
-            color: #f97316;
-            margin-bottom: 18px;
-        }
-
-        .header h1 {
-            font-size: 38px;
-            margin-bottom: 12px;
-            color: #171717;
-        }
-
-        .header p {
-            color: #737373;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        .header span {
-            color: #f97316;
-        }
-
-        /* Project Cards */
-        .days {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .day-card {
-            background: #ffffff;
-            padding: 30px 22px;
-            border-radius: 14px;
-            border: 1px solid #e5e5e5;
-            text-align: center;
-            transition: 0.3s ease;
-        }
-
-        .day-card:hover {
-            transform: translateY(-6px);
-            border-color: #f97316;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Card Icon */
-        .icon {
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff7ed;
-            border-radius: 14px;
-            color: #f97316;
-            font-size: 28px;
-        }
-
-        .day-card h2 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #171717;
-        }
-
-        .day-card p {
-            color: #737373;
-            font-size: 14px;
-            margin-bottom: 22px;
-            line-height: 1.6;
-        }
-
-        /* Button */
-        .day-card a {
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .day-card button {
-            border: none;
-            background: #f97316;
-            color: #ffffff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .day-card button:hover {
-            background: #ea580c;
-            transform: scale(1.03);
-        }
-
-        .day-card button i {
-            margin-left: 7px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 22px;
-            border-top: 1px solid #e5e5e5;
-            color: #737373;
-            font-size: 13px;
-        }
-
-        /* Tablet */
-        @media (max-width: 850px) {
-            .days {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            section {
-                width: 90%;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 550px) {
-            .navbar {
-                padding: 18px 5%;
-            }
-
-            .logo {
-                font-size: 19px;
-            }
-
-            section {
-                margin-top: 40px;
-            }
-
-            .days {
-                grid-template-columns: 1fr;
-            }
-
-            .header h1 {
-                font-size: 29px;
-            }
-
-            .header p {
-                font-size: 14px;
-            }
-
-            .day-card {
-                padding: 26px 20px;
-            }
-        }
-    </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="min-h-screen bg-neutral-50 font-sans text-neutral-900">
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-code"></i>
+    <nav class="flex flex-wrap items-center justify-between gap-4 bg-neutral-900 px-[7%] py-5 text-white">
+
+        <div class="flex items-center gap-3 text-2xl font-bold">
+            <i class="fa-solid fa-code text-3xl text-orange-500"></i>
             <span>HTML Projects</span>
         </div>
 
-        <div class="nav-text">
-            <i class="fa-solid fa-graduation-cap"></i>
+        <p class="text-sm text-neutral-300">
+            <i class="fa-solid fa-graduation-cap mr-2 text-orange-500"></i>
             Learn • Practice • Build
-        </div>
+        </p>
+
     </nav>
 
-    <section>
+    <main class="mx-auto my-12 w-[90%] max-w-6xl">
 
         <!-- Header -->
-        <div class="header">
-            <div class="main-icon">
-                <i class="fa-solid fa-laptop-code"></i>
-            </div>
+        <header class="mb-12 text-center">
 
-            <h1>Welcome to Our <span>HTML Project</span></h1>
+            <i class="fa-solid fa-laptop-code mb-5 text-5xl text-orange-500"></i>
 
-            <p>
+            <h1 class="mb-4 text-3xl font-bold sm:text-4xl">
+                Welcome to Our
+                <span class="text-orange-500">HTML Projects</span>
+            </h1>
+
+            <p class="text-base leading-7 text-neutral-500">
                 Explore and practice HTML projects day by day.<br>
                 Build your skills, one project at a time.
             </p>
-        </div>
+
+        </header>
 
         <!-- Project Cards -->
-        <div class="days">
+        <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
 
             <!-- Day 1 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-brands fa-html5"></i>
                 </div>
-                <h2>Day 1</h2>
-                <p>HTML Basics and Structure</p>
-                <a href="file:///D:/Front_End/html/day1/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 1</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    HTML Basics and Structure
+                </p>
+
+                <a href="day1/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
             <!-- Day 2 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-solid fa-code"></i>
                 </div>
-                <h2>Day 2</h2>
-                <p>HTML Elements and Tags</p>
-                <a href="file:///D:/Front_End/html/Day2/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 2</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    HTML Elements and Tags
+                </p>
+
+                <a href="Day2/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
             <!-- Day 3 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-solid fa-table"></i>
                 </div>
-                <h2>Day 3</h2>
-                <p>Tables and Forms</p>
-                <a href="file:///D:/Front_End/html/Day3/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 3</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    Tables and Forms
+                </p>
+
+                <a href="Day3/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
             <!-- Day 4 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
-                <h2>Day 4</h2>
-                <p>Web Page Design</p>
-                <a href="file:///D:/Front_End/html/Day4/webpagel/Task2/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 4</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    Web Page Design
+                </p>
+
+                <a href="Day4/webpagel/Task2/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
             <!-- Day 5 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-solid fa-image"></i>
                 </div>
-                <h2>Day 5</h2>
-                <p>Images and Multimedia</p>
-                <a href="file:///D:/Front_End/html/Day5/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 5</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    Images and Multimedia
+                </p>
+
+                <a href="Day5/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
             <!-- Day 6 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-solid fa-link"></i>
                 </div>
-                <h2>Day 6</h2>
-                <p>Links and Navigation</p>
-                <a href="file:///D:/Front_End/html/Day6/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 6</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    Links and Navigation
+                </p>
+
+                <a href="Day6/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
             <!-- Day 7 -->
-            <div class="day-card">
-                <div class="icon">
+            <div class="rounded-2xl border border-neutral-200 bg-white p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500">
                     <i class="fa-solid fa-globe"></i>
                 </div>
-                <h2>Day 7</h2>
-                <p>Complete HTML Project</p>
-                <a href="file:///D:/Front_End/html/Day7/index.html">
-                    <button>Open Project <i class="fa-solid fa-arrow-right"></i></button>
+
+                <h2 class="mb-3 text-2xl font-bold">Day 7</h2>
+
+                <p class="mb-6 text-sm leading-6 text-neutral-500">
+                    Complete HTML Project
+                </p>
+
+                <a href="Day7/index.html"
+                    class="inline-block rounded-lg bg-orange-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-orange-600">
+                    Open Project <i class="fa-solid fa-arrow-right ml-1"></i>
                 </a>
+
             </div>
 
         </div>
 
         <!-- Footer -->
-        <footer>
+        <footer class="mt-12 border-t border-neutral-200 px-4 py-6 text-center text-sm text-neutral-500">
             <p>© 2026 HTML Learning Project. Keep Learning, Keep Building.</p>
         </footer>
 
-    </section>
+    </main>
 
 </body>
 </html>
+```

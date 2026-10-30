@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,349 +10,198 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #090d16;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Ambient Background Glow */
-        .glow-bg {
-            position: fixed;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(236, 72, 153, 0.1) 50%, transparent 70%);
-            filter: blur(80px);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            padding: 40px 0;
-        }
-
-        /* Simple Header */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            font-size: 13px;
-            color: #a5b4fc;
-            margin-bottom: 16px;
-        }
-
-        .badge i {
-            color: #ec4899;
-        }
-
-        h1 {
-            font-size: 44px;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 8px;
-        }
-
-        h1 span {
-            background: linear-gradient(135deg, #38bdf8, #a855f7, #ec4899);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        header p {
-            color: #94a3b8;
-            font-size: 16px;
-        }
-
-        /* Cards Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 22px;
-        }
-
-        /* Clean Glass Card */
-        .card {
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 22px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 25px var(--glow);
-        }
-
-        .card-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .icon-box {
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            background: var(--icon-bg);
-            color: var(--icon-color);
-            box-shadow: 0 4px 15px var(--glow);
-        }
-
-        .num {
-            font-size: 13px;
-            font-weight: 700;
-            color: #475569;
-        }
-
-        .card-content h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: #fff;
-        }
-
-        .card-content span {
-            color: #94a3b8;
-            font-size: 13.5px;
-        }
-
-        /* Action Row */
-        .card-action {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            color: #cbd5e1;
-            font-size: 13.5px;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .card-action i {
-            transition: transform 0.25s ease;
-        }
-
-        .card:hover .card-action {
-            color: #fff;
-        }
-
-        .card:hover .card-action i {
-            transform: translateX(5px);
-            color: var(--icon-color);
-        }
-
-        /* --- Individual Glow Themes --- */
-        .html-card {
-            --glow: rgba(249, 115, 22, 0.25);
-            --icon-bg: rgba(249, 115, 22, 0.12);
-            --icon-color: #f97316;
-        }
-
-        .css-card {
-            --glow: rgba(56, 189, 248, 0.25);
-            --icon-bg: rgba(56, 189, 248, 0.12);
-            --icon-color: #38bdf8;
-        }
-
-        .bs-card {
-            --glow: rgba(168, 85, 247, 0.25);
-            --icon-bg: rgba(168, 85, 247, 0.12);
-            --icon-color: #c084fc;
-        }
-
-        .tailwind-card {
-            --glow: rgba(45, 212, 191, 0.25);
-            --icon-bg: rgba(45, 212, 191, 0.12);
-            --icon-color: #2dd4bf;
-        }
-
-        .js-card {
-            --glow: rgba(250, 204, 21, 0.25);
-            --icon-bg: rgba(250, 204, 21, 0.12);
-            --icon-color: #facc15;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #64748b;
-            font-size: 13px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 32px; }
-            .container { padding: 30px 0; }
-        }
-    </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="flex min-h-screen flex-col justify-between overflow-x-hidden bg-neutral-50 font-[Plus_Jakarta_Sans] text-neutral-900">
 
-    <div class="glow-bg"></div>
+    <!-- Navbar -->
+    <nav class="flex flex-wrap items-center justify-between gap-4 bg-neutral-900 px-[7%] py-5 text-white">
 
-    <div class="container">
+        <div class="flex items-center gap-3 text-2xl font-extrabold">
+            <i class="fa-solid fa-code text-3xl text-orange-500"></i>
+            <span>Frontend Projects</span>
+        </div>
 
-        <!-- Minimal Header -->
-        <header>
-            <div class="badge">
-                <i class="fa-solid fa-sparkles"></i> 2026 Projects
+       
+        
+
+    </nav>
+
+    <!-- Main Container -->
+    <main class="mx-auto w-[90%] max-w-6xl py-12">
+
+        <!-- Header -->
+        <header class="mb-12 text-center">
+
+            <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-bold text-orange-600">
+                <i class="fa-solid fa-sparkles"></i>
+                2026 Projects
             </div>
-            <h1>Frontend <span>Workspace</span></h1>
-            <p>Pick a technology to view its work</p>
+
+            <h1 class="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Frontend <span class="text-orange-500">Workspace</span>
+            </h1>
+
+            
+
         </header>
 
-        <!-- Clean Grid -->
-        <div class="grid">
+        <!-- Project Cards -->
+        <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
 
             <!-- HTML -->
-            <a href="html/index.html" class="card html-card">
-                <div class="card-top">
-                    <div class="icon-box">
+            <a href="html/index.html"
+                class="group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 text-neutral-900 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500 transition group-hover:scale-110">
                         <i class="fa-brands fa-html5"></i>
                     </div>
-                    <span class="num">01</span>
+                    <span class="text-sm font-bold text-neutral-400">01</span>
                 </div>
-                <div class="card-content">
-                    <h3>HTML5</h3>
-                    <span>Structure & Forms</span>
+
+                <div>
+                    <h3 class="mb-2 text-xl font-bold">HTML5</h3>
+                    <span class="text-sm text-neutral-500">Structure & Forms</span>
                 </div>
-                <div class="card-action">
+
+                <div class="flex items-center justify-between border-t border-neutral-200 pt-4 text-sm font-semibold text-neutral-600 transition group-hover:text-orange-500">
                     <span>Open Folder</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </div>
+
             </a>
 
             <!-- CSS -->
-            <a href="css/index.html" class="card css-card">
-                <div class="card-top">
-                    <div class="icon-box">
+            <a href="css/index.html"
+                class="group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 text-neutral-900 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500 transition group-hover:scale-110">
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
-                    <span class="num">02</span>
+                    <span class="text-sm font-bold text-neutral-400">02</span>
                 </div>
-                <div class="card-content">
-                    <h3>CSS3</h3>
-                    <span>Layouts & Animations</span>
+
+                <div>
+                    <h3 class="mb-2 text-xl font-bold">CSS3</h3>
+                    <span class="text-sm text-neutral-500">Layouts & Animations</span>
                 </div>
-                <div class="card-action">
+
+                <div class="flex items-center justify-between border-t border-neutral-200 pt-4 text-sm font-semibold text-neutral-600 transition group-hover:text-orange-500">
                     <span>Open Folder</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </div>
+
             </a>
 
             <!-- Bootstrap -->
-            <a href="file:///D:/Front_End/bootsrap/index.html" class="card bs-card">
-                <div class="card-top">
-                    <div class="icon-box">
+            <a href="bootsrap/index.html"
+                class="group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 text-neutral-900 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500 transition group-hover:scale-110">
                         <i class="fa-brands fa-bootstrap"></i>
                     </div>
-                    <span class="num">03</span>
+                    <span class="text-sm font-bold text-neutral-400">03</span>
                 </div>
-                <div class="card-content">
-                    <h3>Bootstrap</h3>
-                    <span>Components & Grid</span>
+
+                <div>
+                    <h3 class="mb-2 text-xl font-bold">Bootstrap</h3>
+                    <span class="text-sm text-neutral-500">Components & Grid</span>
                 </div>
-                <div class="card-action">
+
+                <div class="flex items-center justify-between border-t border-neutral-200 pt-4 text-sm font-semibold text-neutral-600 transition group-hover:text-orange-500">
                     <span>Open Folder</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </div>
+
             </a>
 
             <!-- Tailwind CSS -->
-            <a href="file:///D:/Front_End/Tailwind/index.html" class="card tailwind-card">
-                <div class="card-top">
-                    <div class="icon-box">
+            <a href="Tailwind/index.html"
+                class="group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 text-neutral-900 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500 transition group-hover:scale-110">
                         <i class="fa-solid fa-wind"></i>
                     </div>
-                    <span class="num">04</span>
+                    <span class="text-sm font-bold text-neutral-400">04</span>
                 </div>
-                <div class="card-content">
-                    <h3>Tailwind CSS</h3>
-                    <span>Utility & Modern UI</span>
+
+                <div>
+                    <h3 class="mb-2 text-xl font-bold">Tailwind CSS</h3>
+                    <span class="text-sm text-neutral-500">Utility & Modern UI</span>
                 </div>
-                <div class="card-action">
+
+                <div class="flex items-center justify-between border-t border-neutral-200 pt-4 text-sm font-semibold text-neutral-600 transition group-hover:text-orange-500">
                     <span>Open Folder</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </div>
+
             </a>
 
             <!-- JavaScript -->
-            <a href="file:///D:/Front_End/javascript/index.html" class="card js-card">
-                <div class="card-top">
-                    <div class="icon-box">
+            <a href="javascript/index.html"
+                class="group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 text-neutral-900 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500 transition group-hover:scale-110">
                         <i class="fa-brands fa-js"></i>
                     </div>
-                    <span class="num">05</span>
+                    <span class="text-sm font-bold text-neutral-400">05</span>
                 </div>
-                <div class="card-content">
-                    <h3>JavaScript</h3>
-                    <span>DOM & Interactivity</span>
+
+                <div>
+                    <h3 class="mb-2 text-xl font-bold">JavaScript</h3>
+                    <span class="text-sm text-neutral-500">DOM & Interactivity</span>
                 </div>
-                <div class="card-action">
+
+                <div class="flex items-center justify-between border-t border-neutral-200 pt-4 text-sm font-semibold text-neutral-600 transition group-hover:text-orange-500">
                     <span>Open Folder</span>
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
                 </div>
+
+            </a>
+
+            <!-- React -->
+            <a href="React/index.html"
+                class="group flex flex-col justify-between gap-6 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 text-neutral-900 transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/30">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-3xl text-orange-500 transition group-hover:scale-110">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <span class="text-sm font-bold text-neutral-400">06</span>
+                </div>
+
+                <div>
+                    <h3 class="mb-2 text-xl font-bold">React</h3>
+                    <span class="text-sm text-neutral-500">Components & Hooks</span>
+                </div>
+
+                <div class="flex items-center justify-between border-t border-neutral-200 pt-4 text-sm font-semibold text-neutral-600 transition group-hover:text-orange-500">
+                    <span>Open Folder</span>
+                    <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
+                </div>
+
             </a>
 
         </div>
 
-    </div>
+    </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 bg-white px-5 py-6 text-center text-sm text-neutral-500">
         Frontend Development Dashboard
     </footer>
 
