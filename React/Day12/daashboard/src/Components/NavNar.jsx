@@ -10,9 +10,9 @@ const NavNar = () => {
 
         <div className=" flex gap-15 mx-10">
             
-            <Link to="/register" className="bg-white  text-center rounded-2xl p-2 ">Register</Link>
+            <Link to="/" className="bg-white  text-center rounded-2xl p-2 ">Register</Link>
             <Link to="/login" className="bg-white  text-center rounded-2xl p-2 ">Login</Link>
-            <Link to="/" className="bg-white  text-center rounded-2xl p-2 " >Daashboard</Link>
+            <Link to="/dashboard" className="bg-white  text-center rounded-2xl p-2 " >Daashboard</Link>
         </div>
     </div>
     

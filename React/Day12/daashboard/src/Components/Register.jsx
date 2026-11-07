@@ -6,6 +6,7 @@ const Register = () => {
   const [showName, setShowName]  = useState("")
   const [showEmail, setShowEmail]  = useState("")
   const [showNumber, setShowNumber]  = useState("")
+
   const [showError, setShowError] = useState("")
 
   const navigate = useNavigate();
@@ -31,17 +32,19 @@ const Register = () => {
         return
       }
 
-      const dataEmail = JSON.parse(localStorage.getItem("firstData") || "[]")
-      const checkEmail = dataEmail.map((e)=> e.dataEmail == showEmail)
+      const dataEmail = JSON.parse(localStorage.getItem("firstData"))
+
+      const checkEmail = dataEmail.find((e)=> e.showEmail == showEmail)
       if(checkEmail){
         setShowError("You already have account")
+        return
       }
 
 
       
-      let obj = {id:Date.now(),showName, showEmail, showNumber  }
+      let obj = {id:Date.now(),showName, showEmail, showNumber }
       
-      const datas = JSON.parse(localStorage.getItem("firstData") || "[]")
+      const datas = JSON.parse(localStorage.getItem("firstData")) || []
        datas.push(obj)
        localStorage.setItem("firstData" ,JSON.stringify(datas))
 

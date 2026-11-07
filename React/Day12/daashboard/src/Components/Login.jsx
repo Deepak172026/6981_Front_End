@@ -25,15 +25,21 @@ const Login = () => {
         return
       }
 
-      const dataEmail = JSON.parse(localStorage.getItem("firstData") || "[]")
-      const checkEmail = dataEmail.map((e)=> e.dataEmail == showEmail && e.dataEmail == showNumber )
+      const dataEmail = JSON.parse(localStorage.getItem("firstData"))
+      
+      
+      const checkEmail = dataEmail.find((e)=> e.showEmail == showEmail && e.showNumber == showNumber )
+      console.log(checkEmail);
       if(!checkEmail){
         setShowError("user email or password invalid")
+        return
       }
       
+      localStorage.setItem("isActive", JSON.stringify(checkEmail))
+
       setShowError("User Email and Password is correct wait....")
 
-      setTimeout(()=>{navigate("/")},2000)
+      setTimeout(()=>{navigate("/dashboard")},2000)
       setShowEmail("")
       setShowNumber("")
 
